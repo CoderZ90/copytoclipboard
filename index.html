@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Copy Text To Clipboard</title>
+</head>
+<body>
+    <div class="wrapper">
+        <textarea class="textBox" readonly>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est velit esse quia dolore distinctio laboriosam harum aspernatur. Nihil neque cupiditate commodi libero culpa temporibus fugiat officiis dignissimos explicabo a voluptatibus impedit sit, repellat voluptatem velit fugit, aliquid voluptas ex vero doloremque? Perferendis a omnis accusamus in nisi magni dolores sit quam aliquid ea adipisci ullam quod nulla, nesciunt debitis ad explicabo vel praesentium dolore pariatur modi repellendus numquam. Non, odio officia, iure nemo vel ab quos nisi libero praesentium labore esse reiciendis a? Ab ipsam soluta tempore eius voluptas, dignissimos similique nesciunt. Voluptates, sapiente corporis. Fugit voluptates eum, numquam deserunt velit aut quia quidem debitis iste in inventore odit ex iusto aperiam consequatur aliquid vitae esse voluptatum nemo! Placeat, tempora assumenda! Excepturi iure est minus consequatur cumque. Non dolorum ex voluptates nulla facere consectetur distinctio esse aperiam molestias sit quo voluptate labore laboriosam, recusandae facilis minus doloremque illum ab laudantium dignissimos adipisci ipsam quibusdam nam! Molestiae officia reprehenderit nostrum perspiciatis. Excepturi est adipisci ipsum maiores corporis quos fugit saepe praesentium tempora neque impedit labore maxime, sit, esse ducimus nihil et ad explicabo voluptate, magni fugiat! Est, sequi! Adipisci excepturi cupiditate, porro suscipit vel ipsa rem, beatae deserunt est, quasi voluptatum nesciunt iste commodi quia accusantium rerum. Fugiat animi temporibus odit quasi exercitationem distinctio eligendi molestias rem voluptatibus, vero optio, commodi nisi ipsum perferendis consequatur voluptate minus itaque illo eius provident inventore. Ducimus exercitationem, illum corrupti laudantium esse iusto. Dignissimos eaque unde modi, odio expedita, aperiam assumenda eveniet labore, nemo numquam maxime sit voluptas! Cumque neque perspiciatis consectetur molestias suscipit tenetur, laboriosam unde quasi minima qui modi eligendi repellat, incidunt fuga veritatis necessitatibus voluptate minus quis. Doloribus ut voluptas culpa eaque praesentium maiores, magnam cumque! Commodi ut, inventore nemo ipsam alias id magnam? Quibusdam recusandae delectus voluptas aliquid magnam impedit optio!
+        
+        </textarea>
+    </div>
+    <button class="btn">Copy</button>
+    <script>
+        const textBox = document.querySelector('.wrapper > .textBox');
+        const btn = document.querySelector('.btn');
+
+        btn.onclick = function() {
+            textBox.select();
+            document.execCommand('copy')
+            btn.innerHTML = 'Copied ✅'
+        };
+    </script>
+</body>
+</html>
